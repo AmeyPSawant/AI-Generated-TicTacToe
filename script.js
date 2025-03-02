@@ -4,6 +4,7 @@ const board = document.getElementById('board');
 const cells = document.querySelectorAll('.cell');
 const statusText = document.getElementById('status');
 const resetButton = document.getElementById('reset');
+const changeModeButton = document.getElementById('change-mode');
 const twoPlayerButton = document.getElementById('two-player');
 const vsComputerButton = document.getElementById('vs-computer');
 
@@ -30,6 +31,7 @@ function startGame(isVsComputer) {
     modeSelection.style.display = 'none';
     gameSection.style.display = 'block';
     statusText.textContent = `It's ${currentPlayer}'s turn`;
+    resetGame();
 }
 
 // Handle cell clicks
@@ -170,10 +172,17 @@ function resetGame() {
     });
 }
 
+// Change game mode
+function changeMode() {
+    gameSection.style.display = 'none';
+    modeSelection.style.display = 'block';
+}
+
 // Event listeners
 twoPlayerButton.addEventListener('click', () => startGame(false));
 vsComputerButton.addEventListener('click', () => startGame(true));
 resetButton.addEventListener('click', resetGame);
+changeModeButton.addEventListener('click', changeMode);
 
 cells.forEach(cell => {
     cell.addEventListener('click', handleCellClick);

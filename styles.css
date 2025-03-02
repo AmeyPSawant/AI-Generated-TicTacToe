@@ -81,16 +81,33 @@ h1 {
     margin-bottom: 20px;
 }
 
-#reset {
+.controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.controls button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    background-color: #28a745;
     color: white;
+}
+
+#reset {
+    background-color: #28a745;
 }
 
 #reset:hover {
     background-color: #218838;
+}
+
+#change-mode {
+    background-color: #dc3545;
+}
+
+#change-mode:hover {
+    background-color: #c82333;
 }
