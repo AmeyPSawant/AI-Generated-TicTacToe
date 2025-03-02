@@ -6,29 +6,29 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-}
-
-.container {
+  }
+  
+  .container {
     text-align: center;
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
+  }
+  
+  h1 {
     margin-bottom: 20px;
-}
-
-.mode-selection {
+  }
+  
+  .mode-selection {
     margin-bottom: 20px;
-}
-
-.mode-selection h2 {
+  }
+  
+  .mode-selection h2 {
     margin-bottom: 10px;
-}
-
-.mode-selection button {
+  }
+  
+  .mode-selection button {
     padding: 10px 20px;
     margin: 5px;
     font-size: 16px;
@@ -37,29 +37,29 @@ h1 {
     border-radius: 5px;
     background-color: #007bff;
     color: white;
-}
-
-.mode-selection button:hover {
+  }
+  
+  .mode-selection button:hover {
     background-color: #0056b3;
-}
-
-.name-input {
+  }
+  
+  .name-input {
     margin-bottom: 20px;
-}
-
-.name-input h2 {
+  }
+  
+  .name-input h2 {
     margin-bottom: 10px;
-}
-
-.name-input input {
+  }
+  
+  .name-input input {
     padding: 10px;
     margin: 5px;
     font-size: 16px;
     border: 1px solid #ddd;
     border-radius: 5px;
-}
-
-.name-input button {
+  }
+  
+  .name-input button {
     padding: 10px 20px;
     margin: 5px;
     font-size: 16px;
@@ -68,64 +68,99 @@ h1 {
     border-radius: 5px;
     background-color: #28a745;
     color: white;
-}
-
-.name-input button:hover {
+  }
+  
+  .name-input button:hover {
     background-color: #218838;
-}
-
-.game {
+  }
+  
+  .game {
     display: none;
-}
-
-.current-mode {
+  }
+  
+  .current-mode {
     font-size: 18px;
     margin-bottom: 10px;
-}
-
-.board {
+  }
+  
+  .board {
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
-    gap: 5px;
-    margin-bottom: 20px;
-}
-
-.cell {
+  }
+  
+  /* Horizontal lines */
+  .cell[data-index="0"],
+  .cell[data-index="1"],
+  .cell[data-index="2"] {
+    border-bottom: 2px solid black;
+  }
+  
+  .cell[data-index="3"],
+  .cell[data-index="4"],
+  .cell[data-index="5"] {
+    border-bottom: 2px solid black;
+  }
+  
+  /* Vertical lines */
+  .cell[data-index="0"],
+  .cell[data-index="3"],
+  .cell[data-index="6"] {
+    border-right: 2px solid black;
+  }
+  
+  .cell[data-index="1"],
+  .cell[data-index="4"],
+  .cell[data-index="7"] {
+    border-right: 2px solid black;
+  }
+  
+  /* Remove borders for the last row and column */
+  .cell[data-index="6"],
+  .cell[data-index="7"],
+  .cell[data-index="8"] {
+    border-bottom: none;
+  }
+  
+  .cell[data-index="2"],
+  .cell[data-index="5"],
+  .cell[data-index="8"] {
+    border-right: none;
+  }
+  
+  .cell {
     width: 100px;
     height: 100px;
-    background-color: #ddd;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 100px;
     font-weight: bold;
     cursor: pointer;
-    border-radius: 5px;
     transition: background-color 0.3s;
-}
-
-.cell.X {
+  }
+  
+  .cell.X {
     color: #007bff;
-}
-
-.cell.O {
+  }
+  
+  .cell.O {
     color: #ff6347;
-}
-
-.cell.disabled {
+  }
+  
+  .cell.disabled {
     background-color: #bbb;
     cursor: not-allowed;
-}
-
-/* Board container */
-.board-container {
+  }
+  
+  /* Board container */
+  .board-container {
     position: relative; /* Needed for absolute positioning of the overlay */
     display: inline-block; /* Ensure it only takes up the size of the board */
-}
-
-/* Overlay styles */
-.overlay {
+  }
+  
+  /* Overlay styles */
+  .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -135,70 +170,82 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
     display: none; /* Hidden by default */
-}
-
-.game-over-text {
+  }
+  
+  .game-over-text {
     font-size: 48px;
     font-weight: bold;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-/* Blinking animation for reset button */
-@keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-.blink {
-    animation: blink 1s 1; /* Blink once */
-}
-
-.status {
+  }
+  
+  /* Blinking animation for reset button */
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .blink {
+    animation: blink 0.5s 1; /* Blink once */
+  }
+  
+  .status {
     font-size: 20px;
+    margin-top: 20px;
     margin-bottom: 20px;
-}
-
-.controls {
+  }
+  
+  .controls {
     display: flex;
     gap: 10px;
     justify-content: center;
-}
-
-.controls button {
+  }
+  
+  .controls button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     border: none;
     border-radius: 5px;
     color: white;
-}
-
-#reset {
+  }
+  
+  #reset {
     background-color: #28a745;
-}
-
-#reset:hover {
+  }
+  
+  #reset:hover {
     background-color: #218838;
-}
-
-#change-mode {
+  }
+  
+  #change-mode {
     background-color: #dc3545;
-}
-
-#change-mode:hover {
+  }
+  
+  #change-mode:hover {
     background-color: #c82333;
-}
-
-@keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-.blink {
-    animation: blink 1s infinite;
-}
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .blink {
+    animation: blink 1s 1;
+  }
+  
