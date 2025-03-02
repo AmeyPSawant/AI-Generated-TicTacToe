@@ -197,8 +197,11 @@ function checkDraw() {
 
 // Update status text
 function updateStatus() {
-    const currentPlayerName = currentPlayer === 'X' ? player1Name : player2Name;
-    statusText.textContent = `It's ${currentPlayerName}'s turn`;
+    if (vsComputer) {
+        statusText.textContent = currentPlayer === 'X' ? `It's ${player1Name}'s turn` : `Computer's turn`;
+    } else {
+        statusText.textContent = currentPlayer === 'X' ? `It's ${player1Name}'s turn` : `It's ${player2Name}'s turn`;
+    }
 }
 
 // End the game
