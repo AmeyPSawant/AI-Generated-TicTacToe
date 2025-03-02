@@ -1,13 +1,13 @@
-# Tic Tac Toe with Minimax Algorithm
+# Tic Tac Toe with Min-Max Algorithm
 
-Welcome to the Tic Tac Toe game project! This is a simple yet powerful implementation of the classic Tic Tac Toe game, enhanced with the Minimax algorithm to ensure an unbeatable AI opponent. The entire codebase, including all modifications and optimizations, was generated using ChatGPT through prompt engineering. Even this README file was crafted with the help of ChatGPT!
+Welcome to the Tic Tac Toe game project! This is a simple yet powerful implementation of the classic Tic Tac Toe game, enhanced with the Min-Max algorithm to ensure an unbeatable AI opponent. The entire codebase, including all modifications and optimizations, was generated using ChatGPT through prompt engineering. Even this README file was crafted with the help of ChatGPT!
 
 ## Features
 
 - **Classic Tic Tac Toe Gameplay**: Play the traditional 3x3 Tic Tac Toe game.
 - **Two Game Modes**: 
   - **Human vs Human**: Play against a friend by entering player names.
-  - **Human vs Computer**: Play against an unbeatable AI powered by the Minimax algorithm.
+  - **Human vs Computer**: Play against an unbeatable AI powered by the Min-Max algorithm.
 - **Interactive Preview**: A live, interactable preview of the game is available below.
 - **GitHub Pages Deployment**: The game is deployed on GitHub Pages for easy access and playability.
 
@@ -34,12 +34,12 @@ You can interact with the live version of the game directly from this README! Cl
 ## Technologies Used
 
 - **HTML/CSS**: For the structure and styling of the game.
-- **JavaScript**: For the game logic and Minimax algorithm implementation.
+- **JavaScript**: For the game logic and Min-Max algorithm implementation.
 - **GitHub Pages**: For hosting and deploying the game.
 
 ## How It Was Built
 
-This project was entirely generated using ChatGPT through a series of prompts and iterative refinements. The Minimax algorithm, game logic, and even this README file were all created with the assistance of AI.
+This project was entirely generated using ChatGPT through a series of prompts and iterative refinements. The Min-Max algorithm, game logic, and even this README file were all created with the assistance of AI.
 
 ## Installation
 
