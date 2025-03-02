@@ -13,9 +13,7 @@ Welcome to the Tic Tac Toe game project! This is a simple yet powerful implement
 
 You can interact with the live version of the game directly from this README! Click the link below to play:
 
-[Live Tic Tac Toe Game]()
-
-*(Replace `your-username` and `your-repo-name` with your actual GitHub username and repository name.)*
+[Live Tic Tac Toe Game](https://ameypsawant.github.io/tic_tac_toe/)
 
 ## How to Play
 
