@@ -14,6 +14,59 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 530px; /* Set a fixed height for the container */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+  }
+  
+  .mode-selection,
+  .name-input,
+  .game {
+    width: 300px; /* Set a fixed width for all sections */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    min-height: 400px; /* Set a consistent height for all sections */
+  }
+  
+  /* Ensure buttons and inputs are consistent in width */
+  .mode-selection button,
+  .name-input input,
+  .name-input button,
+  .controls button {
+    width: 100%; /* Make buttons and inputs full width */
+    max-width: 300px; /* Set a max-width for better appearance */
+    margin: 10px 0; /* Add consistent spacing between buttons */
+  }
+  
+  /* Adjust the board container to fit within the fixed width */
+  .board-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ensure the board container fits within the section */
+  }
+  
+  /* Ensure the board itself is centered */
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 0;
+    margin: 0 auto; /* Center the board horizontally */
+  }
+  
+  /* Adjust the status and controls for better alignment */
+  .status {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .controls {
+    margin-top: 20px;
   }
   
   h1 {
@@ -31,7 +84,7 @@ body {
   .mode-selection button {
     padding: 10px 20px;
     margin: 5px;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
     border: none;
     border-radius: 5px;
@@ -57,16 +110,20 @@ body {
     font-size: 16px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    width: 60%;
   }
   
   .name-input button {
     padding: 10px 20px;
     margin: 5px;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
     border: none;
     border-radius: 5px;
     background-color: #28a745;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
     color: white;
   }
   
@@ -81,12 +138,6 @@ body {
   .current-mode {
     font-size: 18px;
     margin-bottom: 10px;
-  }
-  
-  .board {
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 100px);
   }
   
   /* Horizontal lines */
@@ -204,15 +255,17 @@ body {
     margin-bottom: 20px;
   }
   
-  .controls {
+  .controls,
+  .name-controls {
     display: flex;
     gap: 10px;
     justify-content: center;
+    margin-top:20px;
   }
   
   .controls button {
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
     border: none;
     border-radius: 5px;

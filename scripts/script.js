@@ -293,7 +293,7 @@ function changeMode() {
 
   // Hide the game section and show the mode selection screen
   gameSection.style.display = "none";
-  modeSelection.style.display = "block";
+  modeSelection.style.display = "flex";
 
   // Reset the game state
   resetGame();
