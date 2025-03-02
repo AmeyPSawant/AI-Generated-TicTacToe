@@ -210,7 +210,19 @@ function endGame() {
     cells.forEach(cell => {
         cell.classList.add('disabled');
     });
+
+    // Show the overlay
+    const overlay = document.getElementById('overlay');
+    overlay.style.display = 'flex';
+
+    // Blink the reset button once
+    const resetButton = document.getElementById('reset');
     resetButton.classList.add('blink');
+
+    // Remove the blink animation after it completes
+    resetButton.addEventListener('animationend', () => {
+        resetButton.classList.remove('blink');
+    }, { once: true });
 }
 
 // Reset the game
@@ -223,6 +235,13 @@ function resetGame() {
         cell.textContent = '';
         cell.classList.remove('X', 'O', 'disabled');
     });
+
+    // Hide the overlay
+    const overlay = document.getElementById('overlay');
+    overlay.style.display = 'none';
+
+    // Remove the blink animation if it exists
+    const resetButton = document.getElementById('reset');
     resetButton.classList.remove('blink');
 }
 
