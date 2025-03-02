@@ -5,7 +5,9 @@ Welcome to the Tic Tac Toe game project! This is a simple yet powerful implement
 ## Features
 
 - **Classic Tic Tac Toe Gameplay**: Play the traditional 3x3 Tic Tac Toe game.
-- **Unbeatable AI**: The AI uses the Minimax algorithm to make optimal moves, ensuring a challenging experience.
+- **Two Game Modes**: 
+  - **Human vs Human**: Play against a friend by entering player names.
+  - **Human vs Computer**: Play against an unbeatable AI powered by the Minimax algorithm.
 - **Interactive Preview**: A live, interactable preview of the game is available below.
 - **GitHub Pages Deployment**: The game is deployed on GitHub Pages for easy access and playability.
 
@@ -17,11 +19,18 @@ You can interact with the live version of the game directly from this README! Cl
 
 ## How to Play
 
-1. **Start the Game**: Open the live preview link or clone the repository to your local machine.
-2. **Choose Your Move**: Click on any empty cell to place your mark (X).
-3. **AI Move**: The AI will automatically place its mark (O) after your move.
-4. **Win or Draw**: The game will announce the winner or declare a draw once the game is over.
+### Game Modes
 
+1. **Human vs Human**:
+   - Enter the names of Player 1 (X) and Player 2 (O) when prompted.
+   - Players take turns clicking on empty cells to place their marks.
+   - The game will announce the winner or declare a draw once the game is over.
+
+2. **Human vs Computer**:
+   - Enter your name as Player 1 (X). The AI will automatically play as Player 2 (O).
+   - Click on any empty cell to place your mark (X).
+   - The AI will automatically place its mark (O) after your move.
+   - The game will announce the winner or declare a draw once the game is over.
 ## Technologies Used
 
 - **HTML/CSS**: For the structure and styling of the game.

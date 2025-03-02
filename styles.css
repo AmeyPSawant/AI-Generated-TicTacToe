@@ -6,25 +6,29 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-  }
-  
-  .container {
+}
+
+.container {
     text-align: center;
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  h1 {
+}
+
+h1 {
     margin-bottom: 20px;
-  }
-  
-  .mode-selection {
+}
+
+.mode-selection {
     margin-bottom: 20px;
-  }
-  
-  .mode-selection button {
+}
+
+.mode-selection h2 {
+    margin-bottom: 10px;
+}
+
+.mode-selection button {
     padding: 10px 20px;
     margin: 5px;
     font-size: 16px;
@@ -33,21 +37,25 @@ body {
     border-radius: 5px;
     background-color: #007bff;
     color: white;
-  }
-  
-  .mode-selection button:hover {
+}
+
+.mode-selection button:hover {
     background-color: #0056b3;
-  }
-  
-  .board {
+}
+
+.game {
+    display: none;
+}
+
+.board {
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
     gap: 5px;
     margin-bottom: 20px;
-  }
-  
-  .cell {
+}
+
+.cell {
     width: 100px;
     height: 100px;
     background-color: #ddd;
@@ -58,22 +66,22 @@ body {
     font-weight: bold;
     cursor: pointer;
     border-radius: 5px;
-  }
-  
-  .cell.X {
+}
+
+.cell.X {
     color: #007bff;
-  }
-  
-  .cell.O {
+}
+
+.cell.O {
     color: #ff6347;
-  }
-  
-  .status {
+}
+
+.status {
     font-size: 20px;
     margin-bottom: 20px;
-  }
-  
-  #reset {
+}
+
+#reset {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
@@ -81,8 +89,8 @@ body {
     border-radius: 5px;
     background-color: #28a745;
     color: white;
-  }
-  
-  #reset:hover {
+}
+
+#reset:hover {
     background-color: #218838;
-  }
+}
