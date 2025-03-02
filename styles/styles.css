@@ -118,6 +118,12 @@ h1 {
     cursor: not-allowed;
 }
 
+/* Board container */
+.board-container {
+    position: relative; /* Needed for absolute positioning of the overlay */
+    display: inline-block; /* Ensure it only takes up the size of the board */
+}
+
 /* Overlay styles */
 .overlay {
     position: absolute;
