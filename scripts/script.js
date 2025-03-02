@@ -283,8 +283,20 @@ function resetGame() {
 
 // Change game mode
 function changeMode() {
-  gameSection.style.display = "none";
-  modeSelection.style.display = "block";
+    // Reset player names to default
+    player1Name = 'Player 1';
+    player2Name = 'Player 2';
+
+    // Clear the name input fields
+    player1NameInput.value = '';
+    player2NameInput.value = '';
+
+    // Hide the game section and show the mode selection screen
+    gameSection.style.display = 'none';
+    modeSelection.style.display = 'block';
+
+    // Reset the game state
+    resetGame();
 }
 
 // Event listeners
