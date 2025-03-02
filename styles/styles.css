@@ -14,7 +14,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    min-height: 530px; /* Set a fixed height for the container */
+    min-height: 600px; /* Set a fixed height for the container */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Center content vertically */
@@ -57,6 +57,8 @@ body {
     grid-template-rows: repeat(3, 100px);
     gap: 0;
     margin: 0 auto; /* Center the board horizontally */
+    position: relative; /* Ensure the board is a positioning context */
+    z-index: 1; /* Keep the board above the overlay */
   }
   
   /* Adjust the status and controls for better alignment */
@@ -179,6 +181,7 @@ body {
     border-right: none;
   }
   
+  /* Ensure the cells are above the overlay */
   .cell {
     width: 100px;
     height: 100px;
@@ -189,6 +192,9 @@ body {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
+    position: relative; /* Ensure cells are positioned relative to the board */
+    z-index: 3; /* Ensure cells are above the overlay */
+    box-sizing: border-box;
   }
   
   .cell.X {
@@ -222,6 +228,7 @@ body {
     justify-content: center;
     align-items: center;
     display: none; /* Hidden by default */
+    z-index: 2; /* Ensure the overlay is above the board but below the cells */
   }
   
   .game-over-text {
@@ -260,7 +267,7 @@ body {
     display: flex;
     gap: 10px;
     justify-content: center;
-    margin-top:20px;
+    margin-top: 20px;
   }
   
   .controls button {
