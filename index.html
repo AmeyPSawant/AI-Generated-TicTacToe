@@ -13,15 +13,15 @@
     <h1>Tic Tac Toe</h1>
     <div class="mode-selection" id="mode-selection">
       <h2>Select Game Mode</h2>
-      <button id="two-player">Two Players</button>
-      <button id="vs-computer">Human vs Computer</button>
+      <button id="two-player">Human v/s Human</button>
+      <button id="vs-computer">Human v/s Computer</button>
     </div>
     <div class="name-input" id="name-input" style="display: none;">
       <h2>Enter Player Names</h2>
-      <input type="text" id="player1-name" placeholder="Player 1 (X)">
-      <input type="text" id="player2-name" placeholder="Player 2 (O)">
-      <button id="proceed">Proceed</button>
-      <button id="skip-names">Skip</button>
+      <label for="Player1">Player 1:<input type="text" id="player1-name" placeholder="Player 1 (X)"><br />
+        <label for="Player2">Player 2:<input type="text" id="player2-name" placeholder="Player 2 (O)"><br />
+          <button id="proceed">Proceed</button>
+          <button id="skip-names">Skip</button>
     </div>
     <div class="game" id="game" style="display: none;">
       <div class="current-mode" id="current-mode"></div>
