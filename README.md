@@ -15,7 +15,7 @@ Welcome to the Tic Tac Toe game project! This is a simple yet powerful implement
 
 You can interact with the live version of the game directly from this README! Click the link below to play:
 
-[Live Tic Tac Toe Game](https://ameypsawant.github.io/tic_tac_toe/)
+[Live Tic Tac Toe Game](https://ameypsawant.github.io/AI-Generated-TicTacToe/)
 
 ## How to Play
 
