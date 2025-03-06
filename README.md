@@ -1,6 +1,6 @@
 # Tic Tac Toe with Min-Max Algorithm
 
-Welcome to the Tic Tac Toe game project! This is a simple yet powerful implementation of the classic Tic Tac Toe game, enhanced with the Min-Max algorithm to ensure an unbeatable AI opponent. The entire codebase, including all modifications and optimizations, was generated using ChatGPT through prompt engineering. Even this README file was crafted with the help of ChatGPT!
+Welcome to the Tic Tac Toe game project! This is a simple yet powerful implementation of the classic Tic Tac Toe game, enhanced with the Min-Max algorithm to ensure an unbeatable AI opponent. The entire codebase, including all modifications and optimizations, was _**generated using ChatGPT through prompt engineering. Even this README file was crafted with the help of ChatGPT!**_
 
 ## Features
 
